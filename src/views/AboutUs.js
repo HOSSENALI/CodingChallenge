@@ -1,5 +1,6 @@
 import React from 'react'
-import Layout from '../components/layouts/Layout';
+import Layout from '../layouts/Layout';
+
 const AboutUs = () => {
     return (
         <>
