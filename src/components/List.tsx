@@ -1,5 +1,6 @@
 import React from "react";
-import { People } from "../App";
+import { People } from "./PhotoList";
+
 
 const List = ({ people }: { people: People[] }) => {
   const renderList = (): JSX.Element[] => {
@@ -13,7 +14,6 @@ const List = ({ people }: { people: People[] }) => {
             <div className="desc">
               <b>Author : {person.author}</b>
             </div>
-            <p>{person.id}</p>
           </div>
         </div>
       );

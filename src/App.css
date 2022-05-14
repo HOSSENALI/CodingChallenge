@@ -46,3 +46,6 @@ div.desc {
   display: table;
   clear: both;
 }
+h1{
+  text-align: center;
+}

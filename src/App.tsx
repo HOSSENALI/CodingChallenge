@@ -1,40 +1,16 @@
-import { useState, useEffect } from "react";
+import React from 'react';
+import PhotoList from "./components/PhotoList";
+
 
 import "./App.css";
-import List from "./components/List";
-
-export type People = {
-  id: string;
-  author: string;
-  url: string;
-  download_url: string;
-  width: number;
-  height: number;
-};
-function App() {
-  const [people, setPeople] = useState<People[]>([]);
-  // const [people, setPeople] = useState([]);
-
-  useEffect(() => {
-    const getData = () => {
-      fetch("https://picsum.photos/v2/list?limit=12")
-        .then((response) => response.json())
-        .then((data) => setPeople(data));
-      // console.log(people);
-      // setPeople(data);
-    };
-    getData();
-
-    // setPeople;
-  }, []);
-
-  console.log(people);
+const App = () => {
   return (
-    <div className="App">
-      <h1>Photos of my gallery </h1>
-      <List people={people} />
-    </div>
-  );
+    <section>
+      <div className="App">
+        <PhotoList />
+      </div>
+    </section>
+  )
 }
 
 export default App;
